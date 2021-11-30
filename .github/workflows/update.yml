@@ -28,6 +28,7 @@ jobs:
       id: submodules
       env:
         ACTOR: ${{ github.actor }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
       run: |
         ./update-submodules.sh ${{ matrix.repo }}
     - name: Sync Common Files
