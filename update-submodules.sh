@@ -31,21 +31,19 @@ done
 
 if [[ `git status --porcelain` ]]; then
     printf "\tChanged have been made...\n"
-    echo "::set-output name=changes::true"
 
     git config --global user.email "actions@github.com"
     git config --global user.name "GitHub Actions"
     git add .
     git commit --author="$ACTOR <$ACTOR@users.noreply.github.com>" -m "chore: update submodules"
     printf "\tChanges committed.\n"
-    # if git push 
-    # then
-    #     printf "\tChanges pushed.\n"
-    # else
-    #     printf "\tPush failed.\n"
-    #     exit 1
-    # fi
+    if git push 
+    then
+        printf "\tChanges pushed.\n"
+    else
+        printf "\tPush failed.\n"
+        exit 1
+    fi
 else
-    echo "::set-output name=changes::false"
     printf "\tNothing has been changed\n"
 fi
