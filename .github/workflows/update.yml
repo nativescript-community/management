@@ -1,0 +1,41 @@
+name: Update Plugins
+on:
+  workflow_dispatch:
+    inputs:
+      update-submodules:
+        type: boolean
+        default: "true"
+        description: Update Submodules
+      sync-plugin:
+        type: boolean
+        default: "true"
+        description: Sync Common Files
+      build-plugin:
+        type: boolean
+        default: "true"
+        description: Build Plugin Test
+
+jobs:
+  update:
+    strategy:
+      matrix:
+        repo: [plugin-seed,ui-collectionview,algolia,ui-pager,ui-drawer]
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Update Submodules
+      if: github.event.inputs.update-submodules == 'true'
+      id: submodules
+      env:
+        ACTOR: ${{ github.actor }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        ./update-submodules.sh ${{ matrix.repo }}
+    - name: Sync Common Files
+      if: github.event.inputs.sync-plugin == 'true'
+      run: |
+        ./sync.sh ${{ matrix.repo }}
+    - name: Build Plugin Test
+      if: github.event.inputs.build-plugin == 'true'
+      run: |
+        ./build.sh ${{ matrix.repo }}
