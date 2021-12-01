@@ -19,7 +19,12 @@ jobs:
   update:
     strategy:
       matrix:
-        repo: [plugin-seed,ui-collectionview,algolia,ui-pager,ui-drawer]
+        repo: 
+          - plugin-seed
+          - ui-collectionview
+          - algolia
+          - ui-pager
+          - ui-drawer
     runs-on: ubuntu-latest
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
