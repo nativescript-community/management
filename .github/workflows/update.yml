@@ -21,14 +21,13 @@ jobs:
       matrix:
         repo: [plugin-seed,ui-collectionview,algolia,ui-pager,ui-drawer]
     runs-on: ubuntu-latest
+    env:
+      ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
     steps:
     - uses: actions/checkout@v2
     - name: Update Submodules
       if: github.event.inputs.update-submodules == 'true'
       id: submodules
-      env:
-        ACTOR: ${{ github.actor }}
-        GITHUB_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
       run: |
         ./update-submodules.sh ${{ matrix.repo }}
     - name: Sync Common Files

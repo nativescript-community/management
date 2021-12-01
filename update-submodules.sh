@@ -15,8 +15,7 @@ repo=$1
 
 echo "Updating $repo:"
 printf "\tCloning...\n"
-git config --unset-all http.https://github.com/.extraheader
-git clone https://$ACTOR:$GITHUB_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
+git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
 cd repos/$repo
 for submodule in "${submodules[@]}"
 do
@@ -35,7 +34,7 @@ if [[ `git status --porcelain` ]]; then
     git config --global user.email "actions@github.com"
     git config --global user.name "GitHub Actions"
     git add .
-    git commit --author="$ACTOR <$ACTOR@users.noreply.github.com>" -m "chore: update submodules"
+    git commit --author="$GITHUB_ACTOR <$GITHUB_ACTOR@users.noreply.github.com>" -m "chore: update submodules"
     printf "\tChanges committed.\n"
     if git push 
     then
