@@ -25,7 +25,7 @@ printf "\tCloning...\n"
 git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
 
 cd repos/$repo
-npm i
+npm i --legacy-peer-deps
 
 if grep -q "lerna run build.all" "package.json"
 then
