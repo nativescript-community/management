@@ -22,8 +22,7 @@ repo=$1
 echo "Building $repo:"
 printf "\tCloning...\n"
 
-git config --unset-all http.https://github.com/.extraheader
-git clone https://$ACTOR:$GITHUB_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
+git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
 
 cd repos/$repo
 npm i

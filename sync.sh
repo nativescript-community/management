@@ -21,7 +21,7 @@ repo=$1
 
 echo "Syncing $repo:"
 printf "\tCloning...\n"
-git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@@github.com/nativescript-community/$repo.git --recursive repos/$repo
+git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
 cd repos/$repo
 
 node tools/sync.js
