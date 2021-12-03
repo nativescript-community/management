@@ -26,13 +26,8 @@ git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community
 
 cd repos/$repo
 npm i --legacy-peer-deps
+npm run build.all 
 
-if grep -q "lerna run build.all" "package.json"
-then
-    npm run build.all 
-else
-    npm run build
-fi
 if [ $? -eq 0 ]
 then
     echo -e ${FINISHED}$repo was built successfully.${NOCOLOR}
