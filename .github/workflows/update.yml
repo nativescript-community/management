@@ -25,6 +25,7 @@ jobs:
           - algolia
           - ui-pager
           - ui-drawer
+          - ui-document-picker
     runs-on: ubuntu-latest
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
