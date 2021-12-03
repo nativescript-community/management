@@ -2,6 +2,58 @@
 
 Tools used with GitHub Actions to help maintain Community plugins. This creates a GitHub Action called `Update Plugins` where up to three different commands can be ran across all supported plugins: `Update Submodules`, `Sync Common Files`, and `Build Plugin Test`.
 
+## Currently Supported Repos
+
+- [x] algolia
+- [ ] appurl
+- [ ] ble
+- [ ] css-theme
+- [ ] extendedinfo
+- [ ] flipper
+- [ ] fonticon
+- [ ] geocoding
+- [ ] gesturehandler
+- [ ] gps
+- [ ] https
+- [ ] insomnia
+- [ ] l
+- [ ] licenses
+- [ ] nativescript-drawingpad
+- [ ] nativescript-health-data
+- [ ] observable
+- [ ] perms
+- [x] plugin-seed
+- [ ] preferences
+- [ ] push
+- [ ] sensors
+- [ ] sentry
+- [ ] sqlite
+- [ ] systemui
+- [ ] text
+- [ ] texttospeech
+- [ ] tween
+- [ ] ui-barcodeview
+- [ ] ui-blurview
+- [ ] ui-canvas
+- [ ] ui-canvaslabel
+- [ ] ui-carto
+- [ ] ui-chart
+- [x] ui-collectionview
+- [x] ui-document-picker
+- [x] ui-drawer
+- [ ] ui-image
+- [ ] ui-label
+- [ ] ui-lottie
+- [ ] ui-mapbox
+- [ ] ui-material-components
+- [x] ui-pager
+- [ ] ui-persistent-bottomsheet
+- [ ] ui-pulltorefresh
+- [ ] ui-share-file
+- [ ] ui-social-share
+- [ ] ui-svg
+- [ ] ui-webview
+- [ ] universal-links
 ## Running
 
 The GitHub Action can only be ran from a manual trigger. 
