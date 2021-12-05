@@ -36,7 +36,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] ui-blurview
 - [ ] ui-canvas
 - [ ] ui-canvaslabel
-- [ ] ui-carto
+- [x] ui-carto
 - [ ] ui-chart
 - [x] ui-collectionview
 - [x] ui-document-picker
