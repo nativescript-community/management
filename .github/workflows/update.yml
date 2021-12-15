@@ -27,6 +27,7 @@ jobs:
           - ui-drawer
           - ui-document-picker
           - ui-carto
+          - universal-links
     runs-on: ubuntu-latest
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}

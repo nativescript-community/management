@@ -53,7 +53,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] ui-social-share
 - [ ] ui-svg
 - [ ] ui-webview
-- [ ] universal-links
+- [x] universal-links
 ## Running
 
 The GitHub Action can only be ran from a manual trigger. 
