@@ -15,7 +15,7 @@ repo=$1
 
 echo "Updating $repo:"
 printf "\tCloning...\n"
-git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
+git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
 cd repos/$repo
 for submodule in "${submodules[@]}"
 do

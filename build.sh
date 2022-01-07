@@ -22,7 +22,7 @@ repo=$1
 echo "Building $repo:"
 printf "\tCloning...\n"
 
-git clone https://$GITHUB_ACTOR:$ACTIONS_TOKEN@github.com/nativescript-community/$repo.git --recursive repos/$repo
+git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
 
 cd repos/$repo
 npm i --legacy-peer-deps
