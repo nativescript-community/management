@@ -32,6 +32,11 @@ jobs:
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
     steps:
+    - name: Setup SSH
+      uses: MrSquaare/ssh-setup-action@v1
+      with:
+        host: github.com
+        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     - uses: actions/checkout@v2
     - name: Update Submodules
       if: github.event.inputs.update-submodules == 'true'
