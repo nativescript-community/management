@@ -28,6 +28,7 @@ jobs:
           - ui-document-picker
           - ui-carto
           - universal-links
+          - ui-mapbox
     runs-on: ubuntu-latest
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
