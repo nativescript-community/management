@@ -10,6 +10,10 @@ on:
         type: boolean
         default: "true"
         description: Sync Common Files
+      update-readme:
+        type: boolean
+        default: "true"
+        description: Update Readme
       build-plugin:
         type: boolean
         default: "true"
@@ -52,6 +56,10 @@ jobs:
       if: github.event.inputs.sync-plugin == 'true'
       run: |
         ./sync.sh ${{ matrix.repo }}
+    - name: Update Readme
+      if: github.event.inputs.update-readme == 'true'
+      run: |
+        ./update_readme.sh ${{ matrix.repo }}
     - name: Build Plugin Test
       if: github.event.inputs.build-plugin == 'true'
       run: |
