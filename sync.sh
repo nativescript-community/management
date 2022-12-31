@@ -9,8 +9,6 @@ ERROR='\033[0;31m'
 rm -rf repos
 mkdir repos
 
-submodules=("demo-ng" "demo-react" "demo-svelte" "demo-vue" "tools")
-
 if [ -z "$1" ]
   then
     echo "No repo supplied"

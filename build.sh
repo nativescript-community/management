@@ -25,7 +25,7 @@ printf "\tCloning...\n"
 git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
 
 cd repos/$repo
-npm i --legacy-peer-deps
+yarn
 npm run build.all 
 
 if [ $? -eq 0 ]
