@@ -21,14 +21,18 @@ jobs:
       matrix:
         repo: 
           - plugin-seed
+          - gesturehandler
           - ui-collectionview
           - algolia
           - ui-pager
           - ui-drawer
           - ui-document-picker
+          - ui-material-components
+          - ui-persistent-bottomsheet
           - ui-carto
           - universal-links
           - ui-mapbox
+          - ui-webview
     runs-on: ubuntu-latest
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}

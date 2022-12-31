@@ -12,7 +12,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] flipper
 - [ ] fonticon
 - [ ] geocoding
-- [ ] gesturehandler
+- [x] gesturehandler
 - [ ] gps
 - [ ] https
 - [ ] insomnia
@@ -45,14 +45,14 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] ui-label
 - [ ] ui-lottie
 - [ ] ui-mapbox
-- [ ] ui-material-components
+- [x] ui-material-components
 - [x] ui-pager
-- [ ] ui-persistent-bottomsheet
+- [x] ui-persistent-bottomsheet
 - [ ] ui-pulltorefresh
 - [ ] ui-share-file
 - [ ] ui-social-share
 - [ ] ui-svg
-- [ ] ui-webview
+- [x] ui-webview
 - [x] universal-links
 ## Running
 
