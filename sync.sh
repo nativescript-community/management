@@ -6,8 +6,8 @@ READY='\033[1;92m'
 NOCOLOR='\033[0m' # No Color
 ERROR='\033[0;31m'
 
-rm -rf repos
-mkdir repos
+# rm -rf repos
+# mkdir repos
 
 if [ -z "$1" ]
   then
@@ -18,9 +18,9 @@ fi
 repo=$1
 
 echo "Syncing $repo:"
-printf "\tCloning...\n"
-git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
-cd repos/$repo
+# printf "\tCloning...\n"
+# git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
+cd $repo
 
 node tools/sync.js
 git diff

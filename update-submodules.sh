@@ -1,7 +1,7 @@
 #!/bin/bash
 
-rm -rf repos
-mkdir repos
+# rm -rf repos
+# mkdir repos
 
 submodules=("demo-ng" "demo-react" "demo-svelte" "demo-vue" "tools")
 
@@ -14,9 +14,9 @@ fi
 repo=$1
 
 echo "Updating $repo:"
-printf "\tCloning...\n"
-git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
-cd repos/$repo
+# printf "\tCloning...\n"
+# git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
+cd $repo
 for submodule in "${submodules[@]}"
 do
     if [ -d "$submodule" ]; then

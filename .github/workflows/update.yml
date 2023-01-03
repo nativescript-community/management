@@ -24,19 +24,19 @@ jobs:
     strategy:
       matrix:
         repo: 
-          - plugin-seed
-          - gesturehandler
-          - ui-collectionview
-          - algolia
-          - ui-pager
-          - ui-drawer
-          - ui-document-picker
+          # - plugin-seed
+          # - gesturehandler
+          # - ui-collectionview
+          # - algolia
+          # - ui-pager
+          # - ui-drawer
+          # - ui-document-picker
           - ui-material-components
-          - ui-persistent-bottomsheet
-          - ui-carto
-          - universal-links
-          - ui-mapbox
-          - ui-webview
+          # - ui-persistent-bottomsheet
+          # - ui-carto
+          # - universal-links
+          # - ui-mapbox
+          # - ui-webview
     runs-on: ubuntu-latest
     env:
       ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
@@ -46,12 +46,36 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    - uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: yarn
     - uses: actions/checkout@v2
+    # This part here is cloning a second repository
+    # While cloning the repository:
+    #   - it clones the repo into the given `path`
+    #   - it checks out the branch defined at `ref`
+    - name: Clone component repository
+      uses: actions/checkout@v2
+      with:
+        repository: nativescript-community/${{ matrix.repo }}
+        path: ${{ matrix.repo }}
+    - name: Get yarn version
+      id: yarn-version
+      run: echo "yarn-version:$(yarn --version)" 
+    - uses: actions/cache@v3
+      with:
+        path: '**/node_modules'
+        key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+    - name: Install project dependencies
+      working-directory: ${{ matrix.repo }}
+      run: yarn --prefer-offline
     - name: Update Submodules
       if: github.event.inputs.update-submodules == 'true'
       id: submodules
       run: |
         ./update-submodules.sh ${{ matrix.repo }}
+    
     - name: Sync Common Files
       if: github.event.inputs.sync-plugin == 'true'
       run: |
