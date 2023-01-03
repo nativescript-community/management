@@ -20,7 +20,7 @@ repo=$1
 echo "Updating readme $repo:"
 # printf "\tCloning...\n"
 # git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
-cd $repo
+cd ../$repo
 
 npm run readme
 
