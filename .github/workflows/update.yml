@@ -42,26 +42,28 @@ jobs:
           # - ui-mapbox
           # - ui-webview
     runs-on: ubuntu-latest
-    env:
-      ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
+    # env:
+      # ACTIONS_TOKEN: ${{ secrets.ACTIONS_TOKEN }}
     steps:
-    - name: Setup SSH
-      uses: MrSquaare/ssh-setup-action@v1
-      with:
-        host: github.com
-        private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+    # - name: Setup SSH
+    #   uses: MrSquaare/ssh-setup-action@v1
+    #   with:
+    #     host: github.com
+    #     private-key: ${{ secrets.SSH_PRIVATE_KEY }}
     # - uses: actions/setup-node@v3
     #   with:
     #     node-version: 18
     #     cache: yarn
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     # This part here is cloning a second repository
     # While cloning the repository:
     #   - it clones the repo into the given `path`
     #   - it checks out the branch defined at `ref`
     - name: Clone component repository
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
       with:
+        token: ${{ secrets.ACTIONS_TOKEN }}
+        ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
         submodules: recursive
         repository: nativescript-community/${{ matrix.repo }}
         path: ${{ matrix.repo }}
