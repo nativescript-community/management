@@ -22,13 +22,13 @@ echo "Updating readme $repo:"
 # git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
 cd $repo
 
-npm run readme
+npm run doc
 
 echo
 git config --global user.email "actions@github.com"
 git config --global user.name "GitHub Actions"
 git add .
-git commit --author="$GITHUB_ACTOR <$GITHUB_ACTOR@users.noreply.github.com>" -m "chore: update readme"
+git commit --author="$GITHUB_ACTOR <$GITHUB_ACTOR@users.noreply.github.com>" -m "chore: update doc"
 printf "\tChanges committed.\n"
 if git push 
 then
