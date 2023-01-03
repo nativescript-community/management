@@ -87,7 +87,7 @@ jobs:
     - name: Install dependencies if needed.
       if: steps.lerna-yarn-cache.outputs.cache-hit != 'true'
       working-directory: ${{ matrix.repo }}
-      run: yarn install --ignore-platform --frozen-lockfile
+      run: yarn add --cached
     - name: Update Submodules
       if: github.event.inputs.update-submodules == 'true'
       id: submodules
