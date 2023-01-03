@@ -14,6 +14,10 @@ on:
         type: boolean
         default: "false"
         description: Update Readme
+      update-doc:
+        type: boolean
+        default: "false"
+        description: Update Doc
       build-plugin:
         type: boolean
         default: "false"
@@ -98,6 +102,10 @@ jobs:
       if: github.event.inputs.update-readme == 'true'
       run: |
         ./update_readme.sh ${{ matrix.repo }}
+    - name: Update Doc
+      if: github.event.inputs.update-doc == 'true'
+      run: |
+        ./update_doc.sh ${{ matrix.repo }}
     - name: Build Plugin Test
       if: github.event.inputs.build-plugin == 'true'
       run: |
