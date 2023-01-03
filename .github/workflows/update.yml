@@ -44,6 +44,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+      with:
+        path: management
     - name: Clone component repository
       uses: actions/checkout@v3
       with:
@@ -51,7 +53,7 @@ jobs:
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
         submodules: recursive
         repository: nativescript-community/${{ matrix.repo }}
-        path: ../${{ matrix.repo }}
+        path: ${{ matrix.repo }}
     - name: Set yarn cache directory
       id: yarn-cache
       working-directory: ${{ matrix.repo }}

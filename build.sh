@@ -20,12 +20,8 @@ fi
 repo=$1
 
 echo "Building $repo:"
-printf "\tCloning...\n"
 
-git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
-
-cd repos/$repo
-yarn
+cd $repo
 npm run build.all 
 
 if [ $? -eq 0 ]

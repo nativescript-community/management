@@ -20,7 +20,7 @@ repo=$1
 echo "Syncing $repo:"
 # printf "\tCloning...\n"
 # git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
-cd ../$repo
+cd $repo
 
 node tools/sync.js
 git diff
