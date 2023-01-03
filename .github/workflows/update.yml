@@ -70,7 +70,7 @@ jobs:
         key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
     - name: Install project dependencies
       working-directory: ${{ matrix.repo }}
-      run: yarn --prefer-offline
+      run: yarn add --cached
     - name: Update Submodules
       if: github.event.inputs.update-submodules == 'true'
       id: submodules
