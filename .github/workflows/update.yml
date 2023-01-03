@@ -62,7 +62,8 @@ jobs:
         repository: nativescript-community/${{ matrix.repo }}
         path: ${{ matrix.repo }}
     - name: Set yarn cache directory
-      run: echo "yarn_cache=$(yarn config get cacheFolder)" >> $GITHUB_ENV
+      id: yarn-cache
+      run: echo "RESULT=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
     - name: Cache node modules
       id: lerna-yarn-cache
       if: github.event.inputs.update-readme == 'true'
@@ -71,7 +72,7 @@ jobs:
         cache-name: cache-node-modules
       with:
           path: |
-              ${{ env.yarn_cache }}
+              ${{ steps.yarn-cache.outputs.RESULT }}
               **/node_modules
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/yarn.lock') }}
           restore-keys: |
