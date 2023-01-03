@@ -58,6 +58,7 @@ jobs:
     - name: Clone component repository
       uses: actions/checkout@v2
       with:
+        submodules: recursive
         repository: nativescript-community/${{ matrix.repo }}
         path: ${{ matrix.repo }}
     - name: Get yarn version
