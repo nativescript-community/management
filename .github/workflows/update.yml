@@ -46,10 +46,10 @@ jobs:
       with:
         host: github.com
         private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-    - uses: actions/setup-node@v3
-      with:
-        node-version: 18
-        cache: yarn
+    # - uses: actions/setup-node@v3
+    #   with:
+    #     node-version: 18
+    #     cache: yarn
     - uses: actions/checkout@v2
     # This part here is cloning a second repository
     # While cloning the repository:
