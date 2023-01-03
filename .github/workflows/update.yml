@@ -4,19 +4,19 @@ on:
     inputs:
       update-submodules:
         type: boolean
-        default: "true"
+        default: "false"
         description: Update Submodules
       sync-plugin:
         type: boolean
-        default: "true"
+        default: "false"
         description: Sync Common Files
       update-readme:
         type: boolean
-        default: "true"
+        default: "false"
         description: Update Readme
       build-plugin:
         type: boolean
-        default: "true"
+        default: "false"
         description: Build Plugin Test
 
 jobs:
