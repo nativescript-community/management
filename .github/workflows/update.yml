@@ -63,6 +63,7 @@ jobs:
         path: ${{ matrix.repo }}
     - name: Set yarn cache directory
       id: yarn-cache
+      working-directory: ${{ matrix.repo }}
       run: echo "RESULT=$(yarn config get cacheFolder)" >> $GITHUB_OUTPUT
     - name: Cache node modules
       id: lerna-yarn-cache
