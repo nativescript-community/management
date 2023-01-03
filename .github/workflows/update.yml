@@ -65,7 +65,7 @@ jobs:
       id: yarn-version
       run: echo "yarn-version:$(yarn --version)" 
     - name: Get repo yarn version
-      id: yarn-version
+      id: yarn-version-repo
       working-directory: ${{ matrix.repo }}
       run: echo "yarn-version:$(yarn --version)" 
     - name: Set yarn cache directory
