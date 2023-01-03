@@ -44,8 +44,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-      with:
-        path: management
     - name: Clone component repository
       uses: actions/checkout@v3
       with:
