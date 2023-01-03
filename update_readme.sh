@@ -22,7 +22,6 @@ echo "Updating readme $repo:"
 # git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
 cd $repo
 
-YARN_ENABLE_IMMUTABLE_INSTALLS=false yarn
 npm run readme
 
 echo
