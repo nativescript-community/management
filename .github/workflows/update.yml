@@ -29,6 +29,7 @@ jobs:
       matrix:
         repo: 
           - plugin-seed
+          - ble
           - gesturehandler
           - ui-collectionview
           - algolia

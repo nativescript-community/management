@@ -5,8 +5,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 ## Currently Supported Repos
 
 - [x] algolia
-- [ ] appurl
-- [ ] ble
+- [x] ble
 - [ ] css-theme
 - [ ] extendedinfo
 - [ ] flipper
