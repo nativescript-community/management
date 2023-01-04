@@ -17,8 +17,6 @@ fi
 
 repo=$1
 
-# we rename the management README.md because it breaks typedoc generation
-mv README.md README.md.old
 
 echo "Updating readme $repo:"
 # printf "\tCloning...\n"
