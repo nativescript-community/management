@@ -12,7 +12,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] fonticon
 - [ ] geocoding
 - [x] gesturehandler
-- [ ] gps
+- [x] gps
 - [ ] https
 - [ ] insomnia
 - [ ] l

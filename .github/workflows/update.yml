@@ -30,6 +30,7 @@ jobs:
         repo: 
           - plugin-seed
           - ble
+          - gps
           - gesturehandler
           - ui-collectionview
           - algolia
