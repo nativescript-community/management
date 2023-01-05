@@ -18,6 +18,10 @@ on:
         type: boolean
         default: "false"
         description: Update Doc
+      submodules-https:
+        type: boolean
+        default: "false"
+        description: Update Submodules to HTTPS
       build-plugin:
         type: boolean
         default: "false"
@@ -95,6 +99,10 @@ jobs:
       if: ${{ (matrix.repo != 'plugin-seed') && (github.event.inputs.update-doc == 'true') }}
       run: |
         ./update_doc.sh ${{ matrix.repo }}
+    - name: Update Submodules to HTTPS
+      if: ${{ (github.event.inputs.submodules-https == 'true') }}
+      run: |
+        ./update_submodules_https.sh ${{ matrix.repo }}
     - name: Build Plugin Test
       if: ${{ (matrix.repo != 'plugin-seed') && (github.event.inputs.build-plugin == 'true') }}
       run: |
