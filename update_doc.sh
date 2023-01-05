@@ -25,6 +25,7 @@ echo "Updating readme $repo:"
 # git clone git@github.com:nativescript-community/$repo.git --recursive repos/$repo
 cd $repo
 
+npm run build
 npm run doc
 
 echo
