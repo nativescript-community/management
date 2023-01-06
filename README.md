@@ -20,11 +20,11 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] nativescript-drawingpad
 - [ ] nativescript-health-data
 - [ ] observable
-- [ ] perms
+- [x] perms
 - [x] plugin-seed
 - [ ] preferences
 - [ ] push
-- [ ] sensors
+- [x] sensors
 - [ ] sentry
 - [ ] sqlite
 - [ ] systemui

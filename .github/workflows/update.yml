@@ -38,6 +38,8 @@ jobs:
           - gesturehandler
           - ui-collectionview
           - algolia
+          - perms
+          - sensors
           - ui-pager
           - ui-drawer
           - ui-document-picker
