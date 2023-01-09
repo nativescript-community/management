@@ -36,6 +36,7 @@ jobs:
           - ble
           - gps
           - gesturehandler
+          - https
           - ui-collectionview
           - algolia
           - perms

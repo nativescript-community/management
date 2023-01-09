@@ -13,7 +13,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] geocoding
 - [x] gesturehandler
 - [x] gps
-- [ ] https
+- [x] https
 - [ ] insomnia
 - [ ] l
 - [ ] licenses
