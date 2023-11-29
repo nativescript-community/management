@@ -5,6 +5,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 ## Currently Supported Repos
 
 - [x] algolia
+- [x] arraybuffers
 - [x] ble
 - [ ] css-theme
 - [ ] extendedinfo
@@ -17,6 +18,8 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] insomnia
 - [ ] l
 - [ ] licenses
+- [x] md5
+- [x] motion-activity
 - [ ] nativescript-drawingpad
 - [ ] nativescript-health-data
 - [ ] observable
@@ -26,27 +29,29 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] push
 - [x] sensors
 - [ ] sentry
-- [ ] sqlite
+- [x] sqlite
 - [ ] systemui
-- [ ] text
+- [x] text
 - [ ] texttospeech
 - [ ] tween
 - [ ] ui-barcodeview
 - [ ] ui-blurview
-- [ ] ui-canvas
-- [ ] ui-canvaslabel
+- [x] ui-cameraview
+- [x] ui-canvas
 - [x] ui-carto
 - [ ] ui-chart
+- [ ] ui-checkbox
 - [x] ui-collectionview
 - [x] ui-document-picker
 - [x] ui-drawer
-- [ ] ui-image
+- [x] ui-image
 - [ ] ui-label
 - [ ] ui-lottie
 - [ ] ui-mapbox
 - [x] ui-material-components
 - [x] ui-pager
 - [x] ui-persistent-bottomsheet
+- [x] ui-popover
 - [ ] ui-pulltorefresh
 - [ ] ui-share-file
 - [ ] ui-social-share

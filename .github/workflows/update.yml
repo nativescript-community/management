@@ -32,24 +32,35 @@ jobs:
     strategy:
       matrix:
         repo: 
-          - plugin-seed
-          - ble
-          - gps
-          - gesturehandler
-          - https
-          - ui-collectionview
           - algolia
+          - arraybuffers
+          - audio
+          - ble
+          - gesturehandler
+          - gps
+          - https
+          - md5
+          - motion-activity
           - perms
+          - plugin-seed
           - sensors
-          - ui-pager
-          - ui-drawer
-          - ui-document-picker
-          - ui-material-components
-          - ui-persistent-bottomsheet
+          - sqlite
+          - text
+          - ui-cameraview
+          - ui-canvas
           - ui-carto
-          - universal-links
+          - ui-checkbox
+          - ui-collectionview
+          - ui-document-picker
+          - ui-drawer
+          - ui-image
           - ui-mapbox
+          - ui-material-components
+          - ui-pager
+          - ui-persistent-bottomsheet
+          - ui-popover
           - ui-webview
+          - universal-links
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
