@@ -36,6 +36,7 @@ jobs:
           - arraybuffers
           - audio
           - ble
+          - geocoding
           - gesturehandler
           - gps
           - https
@@ -44,6 +45,7 @@ jobs:
           - perms
           - plugin-seed
           - sensors
+          - sentry
           - sqlite
           - text
           - ui-cameraview

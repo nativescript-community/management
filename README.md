@@ -11,7 +11,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] extendedinfo
 - [ ] flipper
 - [ ] fonticon
-- [ ] geocoding
+- [x] geocoding
 - [x] gesturehandler
 - [x] gps
 - [x] https
@@ -28,7 +28,7 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] preferences
 - [ ] push
 - [x] sensors
-- [ ] sentry
+- [x] sentry
 - [x] sqlite
 - [ ] systemui
 - [x] text
