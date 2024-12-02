@@ -44,23 +44,31 @@ jobs:
           - motion-activity
           - perms
           - plugin-seed
+          - preferences
           - sensors
           - sentry
           - sqlite
+          - systemui
           - text
+          - ui-barcodeview
           - ui-cameraview
           - ui-canvas
           - ui-carto
+          - ui-chart
           - ui-checkbox
           - ui-collectionview
           - ui-document-picker
           - ui-drawer
           - ui-image
+          - ui-label
+          - ui-lottie
           - ui-mapbox
           - ui-material-components
           - ui-pager
           - ui-persistent-bottomsheet
           - ui-popover
+          - ui-pulltorefresh
+          - ui-share-file
           - ui-webview
           - universal-links
     runs-on: ubuntu-latest

@@ -25,37 +25,37 @@ Tools used with GitHub Actions to help maintain Community plugins. This creates 
 - [ ] observable
 - [x] perms
 - [x] plugin-seed
-- [ ] preferences
+- [x] preferences
 - [ ] push
 - [x] sensors
 - [x] sentry
 - [x] sqlite
-- [ ] systemui
+- [x] systemui
 - [x] text
 - [ ] texttospeech
 - [ ] tween
-- [ ] ui-barcodeview
+- [x] ui-barcodeview
 - [ ] ui-blurview
 - [x] ui-cameraview
 - [x] ui-canvas
 - [x] ui-carto
-- [ ] ui-chart
-- [ ] ui-checkbox
+- [x] ui-chart
+- [x] ui-checkbox
 - [x] ui-collectionview
 - [x] ui-document-picker
 - [x] ui-drawer
 - [x] ui-image
-- [ ] ui-label
-- [ ] ui-lottie
+- [x] ui-label
+- [x] ui-lottie
 - [ ] ui-mapbox
 - [x] ui-material-components
 - [x] ui-pager
 - [x] ui-persistent-bottomsheet
 - [x] ui-popover
-- [ ] ui-pulltorefresh
-- [ ] ui-share-file
+- [x] ui-pulltorefresh
+- [x] ui-share-file
 - [ ] ui-social-share
-- [ ] ui-svg
+- [x] ui-svg
 - [x] ui-webview
 - [x] universal-links
 ## Running
