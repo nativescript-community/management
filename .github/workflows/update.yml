@@ -79,9 +79,17 @@ jobs:
       with:
         token: ${{ secrets.ACTIONS_TOKEN }}
         ssh-key: ${{ secrets.SSH_PRIVATE_KEY }}
-        submodules: recursive
+        submodules: false
         repository: nativescript-community/${{ matrix.repo }}
         path: ${{ matrix.repo }}
+    - name: Fetch repository submodules
+      working-directory: ${{ matrix.repo }}
+      run: |
+        if [ -f .gitmodules ]; then
+          git config --local url."git@github.com:".insteadOf "https://github.com/"
+          git submodule sync --recursive
+          git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
+        fi
     - name: Set yarn cache directory
       id: yarn-cache
       working-directory: ${{ matrix.repo }}
