@@ -86,7 +86,8 @@ jobs:
       working-directory: ${{ matrix.repo }}
       run: |
         if [ -f .gitmodules ]; then
-          git config --local url."git@github.com:".insteadOf "https://github.com/"
+          git config --local url."https://github.com/".insteadOf "git@github.com:"
+          git config --local url."https://github.com/".insteadOf "ssh://git@github.com/"
           git submodule sync --recursive
           git -c protocol.version=2 submodule update --init --force --depth=1 --recursive
         fi
